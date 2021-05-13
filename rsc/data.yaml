@@ -1,0 +1,13 @@
+pop:
+  # Global population (July 2020)
+  # https://www.indexmundi.com/world/demographics_profile.html
+  global: 7_684_292_383
+  # 74% of the global population are adults (16+)
+  # https://www.statista.com/statistics/265759/world-population-by-age-and-region/
+  percent_adults: 0.74
+
+# For GHGe emission electricity equivalence calculation
+conversion:
+  # https://www.eia.gov/tools/faqs/faq.php?id=74&t=11
+  lb_co2_per_kwh: 0.92      # [lb CO₂e / kWh]
+  lb_per_tonne:   2204.62   # [lb / metric tonne]

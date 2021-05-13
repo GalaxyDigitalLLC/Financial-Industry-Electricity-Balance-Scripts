@@ -1,0 +1,7 @@
+__pycache__/
+bk/
+.DS_Store
+*.bk
+*.pyc
+*.sw[op]
+

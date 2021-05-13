@@ -1,0 +1,67 @@
+server:
+  # Operates 24 hr/day * 7 day/wk * 52 wk/yr = 8,760 hr/yr
+  hours: 8_760
+  # https://www.datacenterknowledge.com/power-and-cooling/new-workloads-cost-pressures-drive-data-center-power-densities
+  server_demand_per_sq_ft: 0.4
+  dc_area: 75_000
+  # S&P Capital IQ
+  total_deposit_100: 70_972.1
+  boa:
+    # S&P Capital IQ
+    total_deposit: 1_795.4800
+    # https://www.ciodive.com/news/bank-of-america-prioritized-internal-cloud-now-its-evaluating-third-party/565228
+    num_dc: 23
+
+
+branch:
+  # https://data.worldbank.org/indicator/FB.CBK.BRCH.P5?end=2019&start=2019&view=bar
+  num_per_100k_adults: 11.51
+  business:
+    # https://www.eia.gov/electricity/sales_revenue_price/pdf/table5_b.pdf
+    us: 72_792
+    # https://bionic.co.uk/business-energy/guides/average-energy-usage-for-businesses/
+    uk: 25_000
+
+  residential:
+    # https://www.eia.gov/energyexplained/use-of-energy/electricity-use-in-homes.php
+    us: 11_000
+    # https://smarterbusiness.co.uk/blogs/average-gas-electricity-usage-uk
+    uk: 3_650
+    # https://www.mdpi.com/2076-3417/8/11/2136
+    mexico: 1_737
+    # https://www.aceee.org/files/proceedings/2016/data/papers/9_76.pdf
+    china: 
+      urban: 1_888
+      rural: 1_371
+
+atm:
+  # Operates 24 hr/day * 7 day/wk * 52 wk/yr = 8,760 hr/yr
+  hours: 8_760
+   # https://prineta.com/atm-power-usage/, 145 W
+  demand: 0.145
+   # The World Bank: https://data.worldbank.org/indicator/FB.ATM.TOTL.P5?end=2019&start=2019&view=bar
+  num_per_100k_adults: 42.78
+
+
+cn:
+  # Operates 24 hr/day * 7 day/wk * 52 wk/yr = 8,760 hr/yr
+  hours: 8_760
+  # Estimated data center demand per area [400 W/ft²]
+  # https://www.datacenterknowledge.com/power-and-cooling/new-workloads-cost-pressures-drive-data-center-power-densities
+  server_demand_per_sq_ft: 0.4
+  # Number of billion txs processed globally in 2019
+  b_tx: 441
+  visa:
+    # Number of billion txs processed by VISA in 2019
+    b_tx: 185.5
+    # VISA's data centers and associated area [ft²]
+    facility:
+      # https://www.networkcomputing.com/networking/inside-visas-data-center
+      OCE:        140_000
+      # https://baxtel.com/data-center/visa-central-us-denver
+      OCC:        70_000
+      # https://www.datacenterdynamics.com/en/news/visa-to-open-london-singapore-data-centers/
+      # https://www.datacenterknowledge.com/uptime/visa-s-uk-network-outage-what-you-need-know
+      London 1:   10_000
+      London 2:   10_000
+      Singapore:  10_000

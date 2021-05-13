@@ -1,0 +1,48 @@
+### Contains data and sources used to estimate the annual electricity consumption of the Bitcoin network.
+### All demand and usage data is reported in kW or kWh, respectively
+
+# https://cbeci.org/
+miners: 
+  demand: 15_870_000
+  usage:  113_880_000_000 
+
+pools:
+  hours:  8760
+  # Server demand reported by Slushpool
+  demand: 0.300
+
+  # https://www.blockchain.com/charts/pools, Accessed on 2021.04.23
+  # 4 day period: 2021.04.19 - 2021.04.22
+  blocks_mined:
+    Unknown:      153
+    F2Pool:       90
+    AntPool:      70
+    Poolin:       67
+    ViaBTC:       61
+    Huobi.pool:   28
+    BTC.TOP:      14
+    SlushPool:    10
+    EMCD Pool:    6
+    SBI Crypto:   3
+    Bitcoin.com:  1
+    OKExPool:     1
+
+  # Server information provided by Slushpool
+  slush_servers:
+    num_mining: 25
+    num_proxy:  25
+    num_bend:   15
+
+nodes:
+  hours: 8760
+  # https://bitcoin.clarkmoody.com/dashboard/, Accessed on 2021.04.23
+  num: 11_740
+  hardware_demand:
+    # https://static.raspberrypi.org/files/product-briefs/USB-C-Product-Brief.pdf
+    rpi:    0.0153
+    # https://energyusecalculator.com/electricity_laptop.htm
+    laptop: 0.060
+    # https://ark.intel.com/content/www/us/en/ark/products/65719/intel-core-i7-3770-processor-8m-cache-up-to-3-90-ghz.html
+    # https://image-us.samsung.com/SamsungUS/pim/migration/doc/mz-75e1t0b-am_850EVO.pdf
+    # 77W + 4 W SSD
+    cpu:    0.081
